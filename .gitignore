@@ -3,6 +3,9 @@
 !*/
 !*.*
 
+# vscode specific
+.vscode
+
 # Don't ignore Makefile
 !Makefile
 
