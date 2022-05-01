@@ -36,6 +36,7 @@ int get_line(char line[], unsigned int limit)
     line[i] = '\0';
     return i;
 }
+
 void escape(char source[], char target[])
 {
     char c;

@@ -2,7 +2,7 @@
 #include <limits.h>
 #include <float.h>
 
-main()
+int main(void)
 {
     /* char */
     /* notice: char is signed! */
@@ -33,8 +33,9 @@ main()
     /* notice: int is signed by default and 32 bit on my hp i5 machine */
     printf("INT_MIN: %d (should be -32768)\n", INT_MIN);
     printf("INT_MAX: %d (should be 32767)\n", INT_MAX);
-    int min_int_value = -2147483648;
-    int max_int_value = 2147483647;
+
+    int min_int_value = -INT_MIN;
+    int max_int_value = INT_MAX;
     min_int_value -= 1;
     max_int_value += 1;
     printf("overflow int: 2147483647 + 1: %d (should be -2147483648)\n", max_int_value);
@@ -44,4 +45,6 @@ main()
     /* long */
     printf("LONG_MIN: %ld (should be -9223372036854775808)\n", LONG_MIN);
     printf("LONG_MAX: %ld (should be 9223372036854775807)\n", LONG_MAX);
+
+    return 0;
 }
